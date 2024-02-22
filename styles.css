@@ -104,7 +104,7 @@ body.dark-mode .slider:before {
 }
   
 input:checked + .slider {
-    background-color: #fff;
+    background-color: #d1d1cf;
 }
   
 input:focus + .slider {
@@ -138,6 +138,44 @@ h2 {
 
 .logo {
     font-size: 24px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    nav ul {
+        padding: 0;
+        text-align: center;
+    }
+    
+    nav ul li {
+        display: block; /* Stack nav items vertically */
+        margin: 0 auto;
+    }
+
+    .hero h1 {
+        font-size: 24px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    /* Hide slider for theme-switch on smaller screens if needed */
+    .theme-switch-wrapper {
+        display: none;
+    }
+}
+
+/* Additional media query for very small devices */
+@media (max-width: 480px) {
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }
 
 /* Hero Image */
