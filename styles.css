@@ -218,7 +218,7 @@ footer {
     grid-gap: 40px; 
     padding: 80px 50px 20px;
     padding-bottom: 80px;
-    max-width: 1200px; 
+    max-width: 1250px; 
     margin: 0 auto; 
 }
   
@@ -334,7 +334,7 @@ footer {
 
 .gallery-image img {
     width: 400px;
-    height: 300px;
+    height: 400px;
     object-fit: cover;
 }
 
@@ -358,16 +358,15 @@ footer {
 
 /* full screen overlay */
 .fullscreen-overlay {
-    display: none;
-    position: fixed;
+    position: fixed; /* or absolute */
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
-    z-index: 1000;
+    width: 100vw;
+    height: 100vh;
+    display: none; /* Start hidden, show it when an image is clicked */
     justify-content: center;
     align-items: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Optional: for darkening the background */
 }
 
 .fullscreen-image-container {
