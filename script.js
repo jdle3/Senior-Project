@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
     let galleryImages = document.querySelectorAll(".gallery-image img");
     let fullscreenOverlay = document.querySelector(".fullscreen-overlay");
     let fullscreenImage = document.querySelector(".fullscreen-image");
+    let fullscreenImageContainer = document.querySelector(".fullscreen-image-container"); // Assuming this is the container
     let closeFullscreenBtn = document.querySelector(".close-fullscreen-btn");
 
     // Add event listener to close button
@@ -55,6 +56,8 @@ document.addEventListener("DOMContentLoaded", function() {
     document.querySelector(".next-btn").addEventListener("click", function() {
         showNextImage();
     });
+
+    // Event listener for keyboard navigation and closing
     document.addEventListener("keydown", function(e) {
         if (e.key === "ArrowLeft") {
             showPreviousImage();
@@ -63,6 +66,18 @@ document.addEventListener("DOMContentLoaded", function() {
         } else if (e.key === "Escape") {
             fullscreenOverlay.style.display = "none";
         }
+    });
+
+    // Close overlay when clicking outside the fullscreen image container
+    fullscreenOverlay.addEventListener("click", function(e) {
+        if (!fullscreenImageContainer.contains(e.target)) { // Checks if the click was outside the image container
+            fullscreenOverlay.style.display = "none";
+        }
+    });
+
+    // Prevent clicks inside the fullscreen image container from closing the overlay
+    fullscreenImageContainer.addEventListener("click", function(e) {
+        e.stopPropagation(); // Prevents the event from bubbling up to the fullscreenOverlay
     });
 });
 
