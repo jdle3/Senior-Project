@@ -136,45 +136,31 @@ h2 {
     align-items: center;
 }
 
-.logo {
-    font-size: 24px;
+.logo img {
+    max-height: 100px; 
+    width: auto; 
+    padding-top: 5px;
 }
 
 /* Responsive Styles */
 @media (max-width: 768px) {
-    .container {
-        padding: 10px;
+    nav {
+      flex-direction: column;
+      text-align: center;
     }
-
-    nav ul {
-        padding: 0;
-        text-align: center;
+  
+    .nav-items {
+      justify-content: space-around;
+      width: 100%;
+    }
+  
+    .nav-item {
+      padding: 5px 0; /* Adjust padding for a vertical layout */
     }
     
-    nav ul li {
-        display: block; /* Stack nav items vertically */
-        margin: 0 auto;
-    }
-
-    .hero h1 {
-        font-size: 24px;
-    }
-
-    .hero p {
-        font-size: 18px;
-    }
-
     /* Hide slider for theme-switch on smaller screens if needed */
     .theme-switch-wrapper {
         display: none;
-    }
-}
-
-/* Additional media query for very small devices */
-@media (max-width: 480px) {
-    nav ul {
-        flex-direction: column;
-        align-items: flex-start;
     }
 }
 
@@ -334,7 +320,7 @@ footer {
 
 .gallery-image img {
     width: 400px;
-    height: 400px;
+    height: 300px;
     object-fit: cover;
 }
 
