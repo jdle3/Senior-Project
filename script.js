@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
     let galleryImages = document.querySelectorAll(".gallery-image img");
     let fullscreenOverlay = document.querySelector(".fullscreen-overlay");
     let fullscreenImage = document.querySelector(".fullscreen-image");
-    let fullscreenImageContainer = document.querySelector(".fullscreen-image-container"); // Assuming this is the container
+    let fullscreenImageContainer = document.querySelector(".fullscreen-image-container");
     let closeFullscreenBtn = document.querySelector(".close-fullscreen-btn");
 
     // Add event listener to close button
