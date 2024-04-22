@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function() {
     function showNextImage() {
         currentIndex++;
         if (currentIndex >= galleryImages.length) {
-            currentIndex = 0; // Loop back to the first image
+            currentIndex = 0;
         }
         showImage(currentIndex);
     }
@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function() {
     function showPreviousImage() {
         currentIndex--;
         if (currentIndex < 0) {
-            currentIndex = galleryImages.length - 1; // Go to the last image
+            currentIndex = galleryImages.length - 1;
         }
         showImage(currentIndex);
     }
@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // Add event listener to each image
     galleryImages.forEach((img, index) => {
         img.addEventListener("click", function() {
-            currentIndex = index; // Set the current index
+            currentIndex = index;
             showImage(currentIndex);
             fullscreenOverlay.style.display = "flex";
         });
@@ -70,14 +70,14 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Close overlay when clicking outside the fullscreen image container
     fullscreenOverlay.addEventListener("click", function(e) {
-        if (!fullscreenImageContainer.contains(e.target)) { // Checks if the click was outside the image container
+        if (!fullscreenImageContainer.contains(e.target)) {
             fullscreenOverlay.style.display = "none";
         }
     });
 
     // Prevent clicks inside the fullscreen image container from closing the overlay
     fullscreenImageContainer.addEventListener("click", function(e) {
-        e.stopPropagation(); // Prevents the event from bubbling up to the fullscreenOverlay
+        e.stopPropagation(); 
     });
 });
 
@@ -88,9 +88,9 @@ document.addEventListener("DOMContentLoaded", function() {
     // Attach click event listeners to 'More Info' links
     document.querySelectorAll('.more-info').forEach(function(infoBtn) {
         infoBtn.addEventListener('click', function(e) {
-            e.preventDefault(); // Prevent the default anchor link behavior
-            var modal = this.nextElementSibling; // Assuming modal is the next sibling
-            modal.style.display = "block"; // Show the modal
+            e.preventDefault(); 
+            var modal = this.nextElementSibling; 
+            modal.style.display = "block";
         });
     });
 
@@ -117,24 +117,4 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             behavior: 'smooth'
         });
     });
-});
-
-// light/dark mode
-document.addEventListener('DOMContentLoaded', () => {
-    const checkBox = document.getElementById('checkbox');
-    const currentTheme = localStorage.getItem('theme');
-
-    if (currentTheme === 'dark') {
-        document.body.classList.add('dark-mode');
-        checkBox.checked = true;
-    }
-
-    checkBox.addEventListener('change', function() {
-        document.body.classList.toggle('dark-mode');
-        let theme = 'light';
-        if (this.checked) {
-            theme = 'dark';
-        }
-        localStorage.setItem('theme', theme);
-    });
-});
+}); 

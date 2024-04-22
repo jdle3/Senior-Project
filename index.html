@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" type="image/png" href="images/favicon/favicon-32x32.png">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,500;0,600;0,700;1,200;1,400;1,500;1,700&display=swap" rel="stylesheet">
     <script src="script.js"></script>
 </head>
@@ -22,27 +23,70 @@
                     <li><a href="gallery.html">Gallery</a></li>
                     <li><a href="about.html">About Us</a></li>
                     <li><a href="contact.html">Contact</a></li>
-                    <li class="theme-switch-wrapper">
-                        <label class="theme-switch" for="checkbox">
-                            <input type="checkbox" id="checkbox" />
-                            <div class="slider round"></div>
-                        </label>
-                    </li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <!-- Hero section -->
-    <section class="hero">
+    <section class="hero-section">
         <div class="hero-content">
-            <h1>Welcome to Our Nail Salon</h1>
-            <p>Discover beautiful nail designs and professional services.</p>
+            <h1>Welcome to Perfect Nails & Spa</h1>
+            <button class="appointment-button" onclick="location.href='contact.html'">Book Appointment</button>
+        </div>
+    </section>
+    <!-- Services section -->
+    <h2 class ="services-home">Services</h2>
+    <section class="services-section">
+        <div class="service">
+            <a class="service-link" href="services.html">
+                <img src="images/gelmanicure.jpg" alt="Hand Services">
+                <h3>Hands</h3>
+            </a>
+        </div>
+        <div class="service">
+            <a class="service-link" href="services.html">
+                <img src="images/pedicure.jpg" alt="Feet Services">
+                <h3>Feet</h3>
+            </a>
+        </div>
+        <div class="service">
+            <a class="service-link" href="services.html">
+                <img src="images/waxing.jpg" alt="Wax Services">
+                <h3>Waxing</h3>
+            </a>
         </div>
     </section>
 
-    <footer>
-        <p>&copy; 2024 Nail Salon. All rights reserved.</p>
+    <footer class="footer">
+        <div class="footer-column">
+          <h2 class="hours">Hours</h2>
+          <p>Monday: 9:00 AM - 7:00 PM</p>
+          <p>Tuesday: 9:00 AM - 7:00 PM</p>
+          <p>Wednesday: 9:00 AM - 7:00 PM</p>
+          <p>Thursday: 9:00 AM - 7:00 PM</p>
+          <p>Friday: 9:00 AM - 7:00 PM</p>
+          <p>Saturday: 9:00 AM - 6:00 PM</p>
+          <p>Sunday: 10:30 AM - 5:00 PM</p>
+        </div>
+        
+        <div class="footer-column">
+          <div class="social-icons">
+            <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
+            <a href="#"><img src="images/twitter.png" alt="Twitter"></a>
+            <a href="#"><img src="images/instagram.png" alt="Instagram"></a>
+          </div>
+        </div>
+        
+        <div class="footer-column">
+          <h2 class="hours">Location</h2>
+          <p>8251 W Union Hills Dr. #120, <br> Glendale, AZ 85308</p>
+          <p>(623) 561-6928</p>
+          <a href="tel:623-561-6928">Book Appointment »</a>
+        </div>
     </footer>
+    <div class="rights">
+        <p>&copy; 2024 Perfect Nails & Spa. All rights reserved.</p>
+      </div>
 </body>
 </html>
